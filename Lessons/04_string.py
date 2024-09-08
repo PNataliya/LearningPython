@@ -20,3 +20,84 @@ print(text[15])  # Получаем последний символ строки
 # строке, а затем вычесть из этого количества 1.
 # Воспользоваться отрицательными индексами.
 
+language = "Python"
+print(language.lower())
+
+# Методы строк
+# Методы – это операции (действия), которые можно применить к строке.
+# Методы записываются сразу после строки через точку и обязательно в
+# конце содержат скобки.
+# Методы НЕ ИЗМЕНЯЮТ текущую строку, методы ВСЕГДА СОЗДАЮТ в
+# оперативной памяти НОВУЮ строку.
+
+# Популярные МЕТОДЫ строк
+
+# 1)    .upper()
+# Метод .upper() приводит все символы строки к верхнему регистру.
+
+# 2)    .lower()
+# Метод .lower() приводит все символы строки к нижнему регистру.
+
+language = "PyTHon"
+print(language.lower()) # python
+
+#  3)   .title()
+# Метод .title() делает так, чтобы все слова в строке начинались с заглавной буквы.
+# Остальные буквы слова становятся строчными (обратите внимание на PHP).
+
+# Оригинальная строка
+languages = "python PHP sql javascript"
+
+languages = languages.title()
+print("languages:", languages) #  languages: Python Php Sql Javascript
+
+# 4)     .capitilize()
+# Метод .capitilize() делает так, чтобы первая буква всей строки была
+# заглавной.
+# Остальные буквы строки становятся строчными (обратите внимание на PHP).
+
+# Оригинальная строка
+languages = "python PHP sql javascript"
+
+languages = languages.capitalize()
+print("languages:", languages) #languages: Python php sql javascript
+
+# Если строка начинается не с буквы, а, например, с пробела,
+# то .capitalize() для первой буквы не сработает.
+
+# Оригинальная строка
+languages = "    python PHP sql javascript   "
+
+languages = languages.capitalize()
+print("languages:", languages) #languages:     python php sql javascript
+
+
+#  5).strip()
+# Метод .strip() удаляет из строки все начальные и конечные пробелы
+# (а также символы перевода строки).
+
+# Оригинальная строка
+languages = "    python PHP sql javascript   "
+
+# Очищаем от пробелов в начале и в конце
+languages = languages.strip()
+
+# Применяем .capitalize() к очищенной строке
+languages = languages.capitalize()
+print("languages:", languages) #languages: Python php sql javascript
+
+# 6)  Цепочка методов
+# Несколько методов можно записать подряд в цепочку методов.
+# В такой цепочке методы последовательно выполняются слева направо.
+# Каждый новый метод на вход получает строку от предыдущего метода.
+
+# Оригинальная строка
+languages = "    python PHP sql javascript   "
+
+# Сперва очищаем от пробелов в начале и в конце с помощью .strip().
+# Затем применяем .capitalize() к уже очищенной строке.
+# В конце присваиваем результат обратно в languages.
+languages = languages.strip().capitalize()
+
+
+print("languages:", languages) #languages: Python php sql javascript
